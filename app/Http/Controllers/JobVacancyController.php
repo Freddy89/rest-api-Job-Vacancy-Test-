@@ -35,10 +35,6 @@ class JobVacancyController extends Controller
         $response = [
             'status' => 'success',
             'message' => 'JobVacancies are fetched successfully.',
-            'query' => $this->model
-                ->filter($request->all())
-                ->toSql(),
-            'filters' => $request->all(),
             'data' => $job_vacancies,
         ];
 
